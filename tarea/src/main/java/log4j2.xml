@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Properties>
+		<Property name="basePath">/home/mint/sistemalogs/</Property>
+	</Properties>
+	<Appenders>
+		<Console name="Console">
+			<PatternLayout
+				pattern="%n%n%level: %msg %d{dd/MM/YYYY} %d{HH:mm:ss}" />
+		</Console>
+		<File name="File" fileName="${basePath}/documentoTexto.txt">
+			<PatternLayout
+				pattern="%n%n%level: %msg %d{dd/MM/YYYY} %d{HH:mm:ss}" />
+		</File>
+	</Appenders>
+	<Loggers>
+		<Root level="all">
+			<AppenderRef ref="Console" level="debug" />
+			<AppenderRef ref="File" level="info" />
+		</Root>
+	</Loggers>
+</Configuration>
